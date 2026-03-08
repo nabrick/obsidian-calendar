@@ -3,11 +3,9 @@
 ![Status](https://img.shields.io/badge/status-active-lightgrey.svg)
 
 # Calendario for Obsidian
-
 Plugin para Obsidian que añade un calendario interactivo en el panel lateral para crear y navegar tus notas diarias.
 
 ## Características
-
 - Calendario mensual en el **panel lateral derecho**
 - Marcador visual en días que ya tienen nota
 - **Resaltado de hoy** con contorno de acento

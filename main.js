@@ -79,7 +79,6 @@ class CalendarView extends ItemView {
     await this.renderCalendar(this.current, files);
   }
 
-  // Build a Set of dateStrings (YYYY-MM-DD) from the vault for fast lookup
   buildDateSet(files) {
     const dateSet = new Set();
     const datePattern = /\d{4}-\d{2}-\d{2}/;
@@ -101,7 +100,6 @@ class CalendarView extends ItemView {
 
     const dateSet = this.buildDateSet(files);
 
-    // ── Header ──────────────────────────────────────────────────────────────
     const header = this.calendarEl.createDiv({ cls: 'calendar-header' });
 
     const prevBtn = header.createEl('button', { text: '←' });
@@ -132,7 +130,6 @@ class CalendarView extends ItemView {
       this.refreshCalendar();
     };
 
-    // ── Table ────────────────────────────────────────────────────────────────
     const table = this.calendarEl.createEl('table', { cls: 'calendar-table' });
     table.setAttribute('role', 'grid');
 
@@ -140,7 +137,6 @@ class CalendarView extends ItemView {
     const headRow = table.createEl('tr');
     days.forEach(day => headRow.createEl('th', { text: day, attr: { scope: 'col' } }));
 
-    // First day of the month, adjusted to Monday-start week
     let tempDate = new Date(year, month, 1);
     const startDay = (tempDate.getDay() + 6) % 7;
     tempDate.setDate(tempDate.getDate() - startDay);
@@ -203,7 +199,6 @@ class CalendarView extends ItemView {
     try {
       await this.app.vault.createFolder(folder);
     } catch (e) {
-      // Folder already exists — that's fine
     }
 
     const filePath = `${folder}/${prefix} ${dateStr}.md`;
