@@ -1,0 +1,119 @@
+/* styles.css */
+
+.calendar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: transparent;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  padding: 0.2rem 0.5rem;
+}
+
+.calendar-header button:hover {
+  color: var(--text-accent);
+}
+
+.calendar-month-title {
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+}
+
+.calendar-header button.calendar-today-button {
+  margin-left: auto;
+  border: 1px solid var(--interactive-accent);
+  color: var(--interactive-accent);
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  background: none;
+  font-weight: 500;
+  transition: background 0.2s ease-in-out;
+}
+
+.calendar-header button.calendar-today-button:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.calendar-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.calendar-table th {
+  padding: 0.4rem 0;
+  font-weight: 400;
+  color: var(--text-faint);
+}
+
+.calendar-table td {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transition: background 0.2s ease-in-out, color 0.2s;
+}
+
+.calendar-table td.active-day {
+  color: var(--text-normal);
+  cursor: pointer;
+}
+
+.calendar-table td.active-day:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+/* Today: ring outline */
+.calendar-table td.today {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: -2px;
+  font-weight: 700;
+  color: var(--interactive-accent);
+}
+
+/* Day with a note: filled accent */
+.calendar-table td.has-file {
+  background-color: var(--interactive-accent);
+  color: white;
+  font-weight: 600;
+}
+
+/* Today AND has a note */
+.calendar-table td.today.has-file {
+  background-color: var(--interactive-accent);
+  outline: 2px solid var(--text-normal);
+  outline-offset: -2px;
+  color: white;
+  font-weight: 700;
+}
+
+.calendar-table td.inactive-day {
+  opacity: 0.15;
+  pointer-events: none;
+}

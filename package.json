@@ -1,0 +1,12 @@
+{
+    "name": "calendar-plugin",
+    "version": "1.0.0",
+    "description": "Calendario en el panel lateral para navegar y crear notas diarias",
+    "main": "main.js",
+    "scripts": {
+      "build": "echo 'No build step required for Obsidian plugin.'"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+  }
+  

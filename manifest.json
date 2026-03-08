@@ -1,0 +1,9 @@
+{
+    "id": "Calendario",
+    "name": "Calendario",
+    "version": "1.0.0",
+    "minAppVersion": "0.12.0",
+    "description": "Calendario en el panel lateral para navegar y crear notas diarias",
+    "author": "Nabrick",
+    "main": "main.js"
+}
